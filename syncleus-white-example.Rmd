@@ -34,7 +34,7 @@ parskip: 3mm
 #parskip: 0mm
 archive: Pseudoscience Journal of America
 geometry: left=2cm, right=2cm, top=2.25cm, bottom=2.25cm, headheight=13.6pt, letterpaper
-bibliography: ./probabilities.bib
+bibliography: ./syncleus-white-example.bib
 biblio-style: plainnat
 biblio-title: References
 ---
