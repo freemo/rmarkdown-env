@@ -46,6 +46,33 @@ we have Naive Bayes Classifiers and Bayesian Networks which operate on
 completely different principles. Moreover this is compounded with a lack of
 understanding regarding unconditional and conditional probabilities.
 
+\digraph[scale=0.5]{MyGraph}{
+  rankdir="LR";
+	4, 10 [color = pink, style = filled];
+	4->13
+	10->13
+	10->2
+	13, 2 [color = lightblue, style = filled];
+	13->6
+	13->1
+	2->8
+	1, 6, 8 [color = green, style = filled];
+	1->15
+	8->9
+	15, 9 [color = yellow, style = filled];
+	9->5
+	15->3
+	15->12
+	15->11
+	15->14
+	3, 5, 11, 12, 14 [color = orange, style = filled];
+	5->7
+	11->7
+	14->7
+	10->7
+	7 [color = magenta, style = filled];
+}
+
 In this article I offer a tutorial to help bring the lay person up to speed
 with some basic understanding on these concepts and how Bayes Theorem can be
 applied.

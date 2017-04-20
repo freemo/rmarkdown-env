@@ -7,3 +7,11 @@ probabilities.tex
 *.Rproj
 /*.tex
 /*_files/
+*.dot
+*.log
+MyGraph.pdf
+*.aux
+*.log
+*.out
+*.toc
+
