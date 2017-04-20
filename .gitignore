@@ -5,3 +5,5 @@
 *.bbl
 probabilities.tex
 *.Rproj
+/*.tex
+/*_files/

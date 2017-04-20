@@ -3,11 +3,11 @@ title: An Example R Markdown Document
 subtitle: (A Subtitle Would Go Here if This Were a Class)
 author: Steven V. Miller
 institute: Department of Political Science
-titlegraphic: /Dropbox/teaching/clemson-academic.png
+titlegraphic: ./kerning.png
 fontsize: 10pt
 output:
  beamer_presentation:
-    template: ~/Dropbox/miscelanea/svm-r-markdown-templates/svm-latex-beamer.tex
+    template: ./templates/svm-latex-beamer.tex
     keep_tex: true
 # toc: true
  slide_level: 3

@@ -4,7 +4,7 @@ output:
     keep_tex: true
     fig_caption: yes
     latex_engine: pdflatex
-    template: ~/Dropbox/miscelanea/svm-r-markdown-templates/svm-latex-syllabus.tex
+    template: ./templates/svm-latex-syllabus.tex
 geometry: margin=1in
 
 title: "POSC 0000: A Class with an R Markdown Syllabus"
@@ -42,9 +42,9 @@ advdate <- function(obj, adv) {
 }
 
 library(RefManageR)
-# library(knitcitations)
-# library(rcrossref)
-bib <- ReadBib("~/Dropbox/master.bib")
+library(knitcitations)
+library(rcrossref)
+bib <- ReadBib("./svm-rmarkdown-syllabus-example.bib")
 myopts <- BibOptions(bib.style = "authoryear", style="latex", first.inits=FALSE, max.names = 20)
 
 ```
@@ -64,7 +64,7 @@ You'll learn stuff in this class, I hope. Lorem ipsum dolor sit amet, consectetu
 # Required Readings
 
 ```{r, echo = FALSE, results="asis"} 
-bib["vasquez2009twp", "wagner2007ws"]
+bib["small", "big"]
 ``` 
 
 
@@ -88,7 +88,7 @@ I will detail the policy for this course below. Basically, don't cheat and try t
 
 ```{r, include=FALSE}
 options(scipen=999)
-Attend <- read.csv("~/Dropbox/teaching/attendance-grades-relationship.csv")
+Attend <- read.csv("./svm-rmarkdown-syllabus-example.csv")
 Attend$rgrade <- round(Attend$grade, 0)
 Attend$perattend <- (Attend$attendance/Attend$max)*100
 Attend <- subset(Attend, !is.na(rgrade))
@@ -173,13 +173,13 @@ Read *all* associated documents on course website.
 ## `r advdate(mon, 2)`: The First Topic Where We Read John Vasquez
 
 ```{r, echo = FALSE, results="asis"} 
-bib[author = "vasquez"]
+bib[author = "Jass, Hugh"]
 ``` 
 
 ##  `r advdate(mon, 3)`: Read the Nos. 90-97 Items in My Bib
 
 ```{r, echo = FALSE, results="asis"} 
-bib[90:97]
+bib[1:2]
 ``` 
 
 *Your "Slow Ride" appreciation paper is due in Thursday's class*.
@@ -187,7 +187,7 @@ bib[90:97]
 ##  `r advdate(mon, 4)`: Read Bib Item No. 120
 
 ```{r, echo = FALSE, results="asis"} 
-bib[120]
+bib[1]
 ``` 
 
 
@@ -195,7 +195,7 @@ bib[120]
 ##  `r advdate(mon, 5)`: The Fourth Topic with Bib Item No. 510
 
 ```{r, echo = FALSE, results="asis"} 
-bib[510]
+bib[2]
 ``` 
 
 ##  `r advdate(mon, 6)`: Keep

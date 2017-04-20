@@ -5,7 +5,7 @@ output:
     keep_tex: true
     fig_caption: true
     latex_engine: pdflatex
-    template: ~/Dropbox/miscelanea/svm-r-markdown-templates/svm-latex-anon-ms.tex
+    template: ./templates/svm-latex-anon-ms.tex
 title: "An Example Title with a Really Long Title: Also a Subtitle"
 runhead: "A Running Head"
 thanks: "Replication files are available on the author's Github account (http://github.com/svmiller). **Current version**: `r format(Sys.time(), '%B %d, %Y')`; **Corresponding author**: svmille@clemson.edu."
@@ -18,7 +18,7 @@ date: "`r format(Sys.time(), '%B %d, %Y')`"
 geometry: margin=1in
 fontfamily: mathpazo
 fontsize: 11pt
-bibliography: ~/Dropbox/master.bib
+bibliography: ~./syncleus-white.bib
 biblio-style: apsr
 indent: yes
 colorlinks: true
