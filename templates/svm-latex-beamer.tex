@@ -108,8 +108,9 @@ $if(tables)$
 \def\fnum@table{\tablename~\thetable}
 \makeatother
 $endif$
+\usepackage[pdftex]{graphicx}
 $if(graphics)$
-\usepackage{graphicx,grffile}
+\usepackage{grffile}
 \makeatletter
 \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
 \def\maxheight{\ifdim\Gin@nat@height>\textheight0.8\textheight\else\Gin@nat@height\fi}
@@ -119,6 +120,7 @@ $if(graphics)$
 % using explicit options in \includegraphics[width, height, ...]{}
 \setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
 $endif$
+\usepackage{./templates/graphviz}
 
 % Comment these out if you don't want a slide with just the
 % part/section/subsection/subsubsection title:

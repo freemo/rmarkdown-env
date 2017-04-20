@@ -18,7 +18,7 @@ geometry: margin=1in
 fontfamily: mathpazo
 fontsize: 11pt
 # spacing: double
-bibliography: ~./syncleus-white.bib
+bibliography: ~./syncleus-white-example.bib
 biblio-style: apsr
 ---
 

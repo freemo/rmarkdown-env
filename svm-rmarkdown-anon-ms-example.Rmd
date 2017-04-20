@@ -18,7 +18,7 @@ date: "`r format(Sys.time(), '%B %d, %Y')`"
 geometry: margin=1in
 fontfamily: mathpazo
 fontsize: 11pt
-bibliography: ~./syncleus-white.bib
+bibliography: ~./syncleus-white-example.bib
 biblio-style: apsr
 indent: yes
 colorlinks: true
@@ -27,6 +27,33 @@ colorlinks: true
 # Introduction
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec felis placerat, suscipit risus eget, condimentum ex. Nunc laoreet mi nisi, eu volutpat orci porttitor at. Nunc a bibendum diam. Aenean condimentum, neque at gravida imperdiet, orci arcu laoreet risus, eu gravida erat leo et ante. Suspendisse tempor non eros nec vestibulum. Morbi cursus posuere nunc, semper dignissim mi lacinia non. Nunc sagittis ipsum in mattis volutpat. Morbi in mauris ut urna rhoncus pellentesque. Morbi hendrerit sodales metus, at placerat velit bibendum at. Etiam ut est id ligula hendrerit commodo et eget lorem. See my previous scholarship [@miller2013tdpi; @miller2016ieea; @miller2016etst].
+
+\digraph[scale=0.5]{MyGraph}{
+  rankdir="LR";
+	4, 10 [color = pink, style = filled];
+	4->13
+	10->13
+	10->2
+	13, 2 [color = lightblue, style = filled];
+	13->6
+	13->1
+	2->8
+	1, 6, 8 [color = green, style = filled];
+	1->15
+	8->9
+	15, 9 [color = yellow, style = filled];
+	9->5
+	15->3
+	15->12
+	15->11
+	15->14
+	3, 5, 11, 12, 14 [color = orange, style = filled];
+	5->7
+	11->7
+	14->7
+	10->7
+	7 [color = magenta, style = filled];
+}
 
 Proin vitae metus at turpis aliquet pulvinar. Suspendisse potenti. Interdum et malesuada fames ac ante ipsum primis in faucibus. Etiam tincidunt euismod mauris, pulvinar scelerisque nulla accumsan et. Praesent tempus ipsum varius enim eleifend, ut blandit arcu molestie. Vestibulum tempor est blandit ligula porta consequat. Praesent condimentum auctor ligula, ac pellentesque ante fringilla egestas. Praesent accumsan scelerisque eros nec mattis. Donec eget aliquet metus. Sed auctor, lacus mollis hendrerit lobortis, nisl felis vehicula libero, sed aliquet elit augue et eros.
 

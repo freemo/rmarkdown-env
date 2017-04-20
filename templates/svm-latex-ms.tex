@@ -62,8 +62,8 @@ $if(tables)$
 \usepackage{longtable,booktabs}
 $endif$
 
+\usepackage[pdftex]{graphicx}
 $if(graphics)$
-\usepackage{graphicx}
 % We will generate all images so they have a width \maxwidth. This means
 % that they will get their normal width if they fit onto the page, but
 % are scaled down if they would overflow the margins.
@@ -74,6 +74,7 @@ $if(graphics)$
 \let\Oldincludegraphics\includegraphics
 \renewcommand{\includegraphics}[1]{\Oldincludegraphics[width=\maxwidth]{#1}}
 $endif$
+\usepackage{./templates/graphviz}
 
 $if(title)$
 \title{$title$$if(subtitle)$: $subtitle$$endif$ $if(anonymous)$$else$$if(thanks)$\thanks{$thanks$} $endif$$endif$ }
