@@ -1,0 +1,111 @@
+\documentclass[fleqn,12pt]{templates/syncleus-white} % Document font size and equations flushed left
+
+\usepackage[ruled,vlined]{algorithm2e}
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{float}
+
+\usepackage[$if(geometry)$$geometry$$else$left=2cm, right=2cm, top=2.25cm, bottom=2.25cm, headheight=13.6pt, letterpaper$endif$]{geometry}
+
+%----------------------------------------------------------------------------------------
+%    MACROSES
+%----------------------------------------------------------------------------------------
+
+\newcommand{\myvector}[1]{\mathbf{#1}} %\newcommand{\myvector}[1]{\vec#1}
+\newcommand{\cartesian}[1]{\check{\myvector{#1}}}
+\newcommand{\polar}[1]{\mathring{\myvector{#1}}}
+
+%----------------------------------------------------------------------------------------
+%    STYLING
+%----------------------------------------------------------------------------------------
+
+% Show only three levels in the table of contents
+\setcounter{tocdepth}{$if(tocdepth)$$tocdepth$$else$3$endif$}
+% Add Draft Water mark
+$if(draft)$\draft{$draft$}$endif$
+\setlength{\parindent}{$if(indent)$$indent$$else$0pt$endif$}
+\setlength{\parskip}{$if(parskip)$$parskip$$else$3mm$endif$}
+\definecolor{color1}{RGB}{$if(title-color)$$title-color$$else$0,0,0$endif$}
+
+%----------------------------------------------------------------------------------------
+%	ARTICLE INFORMATION
+%----------------------------------------------------------------------------------------
+
+\Revision{$revision$}
+\PaperTitle{$title$}
+
+\Authors{\textbf{$author.name$}$for(other-authors)$, $other-authors.name$$endfor$}
+\affiliation{\textbf{$author.affiliation$}$for(other-authors)$$if(other-authors.affiliation)$, $other-authors.affiliation$$endif$$endfor$}
+$if(author.correspondence)$\affiliation{\textbf{Corresponding author}: $author.correspondence$}$endif$
+\copyrightrange{$start-date$}{$date$}
+\Keywords{$if(tags)$$tags$$endif$}
+\Archive{$if(archive)$$archive$$endif$}
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY SETUP
+%----------------------------------------------------------------------------------------
+
+$if(natbib)$
+\usepackage{natbib}
+\bibliographystyle{$if(biblio-style)$$biblio-style$$else$plainnat$endif$}
+$endif$
+
+$if(biblatex)$
+\usepackage$if(biblio-style)$[style=$biblio-style$]$endif${biblatex}
+$if(biblatexoptions)$\ExecuteBibliographyOptions{$for(biblatexoptions)$$biblatexoptions$$sep$,$endfor$}$endif$
+$for(bibliography)$
+\addbibresource{$bibliography$}
+$endfor$
+$endif$
+$if(listings)$
+\usepackage{listings}
+$endif$
+
+%----------------------------------------------------------------------------------------
+%	ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\Abstract{$abstract$}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\flushbottom % Makes all text pages the same height
+
+\maketitle
+
+\tableofcontents % Print the contents section
+\thispagestyle{empty} % Removes page numbering from the first page
+
+\newpage
+
+$body$
+
+\newpage
+$if(natbib)$
+$if(bibliography)$
+$if(biblio-title)$
+$if(book-class)$
+\renewcommand\bibname{$biblio-title$}
+$else$
+\renewcommand\refname{$biblio-title$}
+$endif$
+$endif$
+\bibliography{$for(bibliography)$$bibliography$$sep$,$endfor$}
+
+$endif$
+$endif$
+$if(biblatex)$
+\printbibliography$if(biblio-title)$[title=$biblio-title$]$endif$
+
+$endif$
+$for(include-after)$
+$include-after$
+
+$endfor$
+
+\end{document}
