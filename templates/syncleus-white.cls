@@ -5,7 +5,7 @@
 % ---------------------------------------------------------------------
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{SyncleusWhite}[7/8/2013, v1.0]
+\ProvidesClass{templates/syncleus-white}[7/8/2013, v1.0]
 \RequirePackage{ifthen}
 \RequirePackage{calc}
 \AtEndOfClass{\RequirePackage{microtype}}
