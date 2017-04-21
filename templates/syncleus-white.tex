@@ -30,6 +30,8 @@ $if(draft)$\draft{$draft$}$endif$
 \setlength{\parindent}{$if(indent)$$indent$$else$0pt$endif$}
 \setlength{\parskip}{$if(parskip)$$parskip$$else$3mm$endif$}
 \definecolor{color1}{RGB}{$if(title-color)$$title-color$$else$0,0,0$endif$}
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 
 %----------------------------------------------------------------------------------------
 %	ARTICLE INFORMATION
