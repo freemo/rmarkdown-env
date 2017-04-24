@@ -14,4 +14,5 @@ MyGraph.pdf
 *.log
 *.out
 *.toc
-
+*.pdf
+*.mw
