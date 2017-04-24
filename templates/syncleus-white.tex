@@ -34,6 +34,8 @@ $if(draft)$\draft{$draft$}$endif$
 \definecolor{color1}{RGB}{$if(title-color)$$title-color$$else$0,0,0$endif$}
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\widowpenalties 1 $if(page-split-penalty)$$page-split-penalty$$else$10000$endif$
+\raggedbottom
 
 %----------------------------------------------------------------------------------------
 %	ARTICLE INFORMATION
@@ -54,7 +56,7 @@ $if(author.correspondence)$\affiliation{\textbf{Corresponding author}: $author.c
 %----------------------------------------------------------------------------------------
 
 $if(natbib)$
-\usepackage{natbib}
+\usepackage[numbers]{natbib}
 \bibliographystyle{$if(biblio-style)$$biblio-style$$else$plainnat$endif$}
 $endif$
 

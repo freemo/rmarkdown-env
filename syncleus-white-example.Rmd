@@ -32,6 +32,7 @@ parskip: 3mm
 # Standard Anglo-american indentation
 #indent: 15pt
 #parskip: 0mm
+page-split-penalty: 10000
 archive: Pseudoscience Journal of America
 geometry: left=2cm, right=2cm, top=2.25cm, bottom=2.25cm, headheight=13.6pt, letterpaper
 bibliography: ./syncleus-white-example.bib
